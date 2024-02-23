@@ -10,7 +10,7 @@ const BlogPosts = {
         description: 'Hello React Router v6'
     }
 };
-const PostsList = () => {
+const PostLists = () => {
 
     return (
         <ul>
@@ -25,4 +25,4 @@ const PostsList = () => {
     )
 }
 
-export default PostsList
+export default PostLists
