@@ -10,6 +10,9 @@ import PostLists from '../Posts/PostLists';
 import Post from '../Posts/Post';
 import Stats from '../Stats/Stats';
 import Login from '../Login/Login';
+import TicTacToe from '../../TicTacToe/ticTacToe';
+import DataFetching from '../DataFetching/DataFetching';
+import ECommerce from '../e-commerce-advance-filtering/ECommerce';
 
 
 const AppLayout = () => {
@@ -52,6 +55,15 @@ const AppLayout = () => {
                             Logout
                         </span>
                     )}
+                    <Link to="/tic-tac-toe" className='nav-link'>
+                        tic-tac-toe
+                    </Link>
+                    <Link to="/data-fetching" className='nav-link'>
+                        Data fetching
+                    </Link>
+                    <Link to="/e-commerce" className='nav-link'>
+                        E-commerce advance filtering
+                    </Link>
                 </div>
             </nav>
             {/* All routes are nested inside it */}
@@ -66,6 +78,9 @@ const AppLayout = () => {
                     <Route path="/login" element={<Login onLogin={setUser} />} />
                     <Route path="/stats" element={<Stats user={user} />} />
                     <Route path="*" element={<NotFound />} />
+                    <Route path="/tic-tac-toe" element={<TicTacToe />} />
+                    <Route path="/data-fetching" element={<DataFetching />} />
+                    <Route path="/e-commerce" element={<ECommerce />} />
                 </Routes>
             </div>
 
