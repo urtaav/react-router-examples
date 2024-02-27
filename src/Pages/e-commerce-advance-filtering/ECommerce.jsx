@@ -64,10 +64,25 @@ const ECommerce = () => {
     const result = filteredData(products, selectedCategory, query);
     return (
         <>
-            <Sidebar handleChange={handleChange}></Sidebar>
-            <Navbar  query={query} handleInputChange={handleInputChange} ></Navbar>
-            <Recommended handleClick={handleClick}/>
-            <Products result={result} />
+
+            <div className="container mt-5">
+                <div className="row">
+                <Navbar  query={query} handleInputChange={handleInputChange} ></Navbar>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-md-3">
+                        <Sidebar handleChange={handleChange}></Sidebar>
+                    </div>
+                    <div className="col-12 col-md-9">
+                        <Recommended handleClick={handleClick} />
+                        <Products result={result} />
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </>
     )
 }

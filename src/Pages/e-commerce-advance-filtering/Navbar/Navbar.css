@@ -16,7 +16,7 @@ nav {
     margin-right: 20px;
     border-radius: 5px;
     position: relative;
-    width: 14rem;
+    width: 20rem !important;
   }
   
   .nav-icons {
